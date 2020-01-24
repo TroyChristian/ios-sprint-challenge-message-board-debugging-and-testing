@@ -14,5 +14,11 @@ Action Plan: This looks like a model error, I'm going to investigate any structs
 
 Fix:  modify expected data to account for firebase returning a dictionary, strip the UUID keys out by using .values to return a list of Message Structs like our program expects. 
 
+UI
 
+1. Send message button is not working
+
+Action Plan: Go find the ViewController responsible for sending  a message in a thread and investigate. 
+
+Fix:  typo in  stringly typed value in prepare for segue function. change "addmesage" to  "addMesssage""
 

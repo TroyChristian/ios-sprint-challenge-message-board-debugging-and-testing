@@ -66,6 +66,8 @@ class MessageThreadTests: XCTestCase {
         }
         
         wait(for: [newMessage], timeout:4)
+        
+        XCTAssertEqual(messageThreadController.messageThreads[0].messages[0].messageText, "Swift")
            
        }
     }
