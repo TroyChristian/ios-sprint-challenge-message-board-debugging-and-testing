@@ -46,9 +46,9 @@ class Message_BoardUITests: XCTestCase {
 
         newTableEntry.tap()
         
-//        app.navigationBars["SwiftR0x"].buttons["MessageThreadDetailTableViewController.AddNewMessageButton"].tap()
+      XCTAssert(app.navigationBars["SwiftR0x"].exists)
         
-        let createNewMessage = app.navigationBars["SwiftR0x"].buttons["MessageThreadDetailTableViewController.AddNewMessageButton"]
+        let createNewMessage = app.navigationBars["SwiftR0x"].buttons["Add"]
         
         createNewMessage.tap()
         
@@ -62,8 +62,8 @@ class Message_BoardUITests: XCTestCase {
         let messageDetailTextView = app.textViews["MessageDetailViewController.TextView"]
         XCTAssert(messageDetailTextView.exists)
         
-        let addButton = app.navigationBars["New Message"].buttons["Add"]
-        XCTAssert(addButton.exists)
+        let addButton = app.navigationBars["New Message"].buttons["Send"]
+      XCTAssert(addButton.exists)
         
         addButton.tap()
 
