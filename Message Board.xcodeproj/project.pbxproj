@@ -64,6 +64,7 @@
 		9D9B6B00214B7A66006381F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D9B6B06214B7A7B006381F7 /* MessageThreadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadTests.swift; sourceTree = "<group>"; };
 		FBF1318823DB5492004FCFB1 /* bugs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = bugs.md; sourceTree = "<group>"; };
+		FBF1318923DB7E3B004FCFB1 /* ReleaseNotes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		4612B5BB211AB41100E7FF73 = {
 			isa = PBXGroup;
 			children = (
+				FBF1318923DB7E3B004FCFB1 /* ReleaseNotes.md */,
 				FBF1318823DB5492004FCFB1 /* bugs.md */,
 				4612B5C6211AB41100E7FF73 /* Message Board */,
 				9D9B6AFD214B7A66006381F7 /* MessageBoardTests */,
