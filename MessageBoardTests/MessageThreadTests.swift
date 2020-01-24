@@ -28,13 +28,16 @@ class MessageThreadTests: XCTestCase {
     
     func testCreatingThread() {
        let messageThreadController = MessageThreadController()
-        
+        let fauxNetworking = expectation(description: "NewThread made")
+      
         messageThreadController.createMessageThread(with: "NewThread") {
+            fauxNetworking.fulfill()
             
         
         
         
     }
+        wait(for: [fauxNetworking], timeout: 4)
         XCTAssertTrue(messageThreadController.messageThreads.count > 0)
     
 }
