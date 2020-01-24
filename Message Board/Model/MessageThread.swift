@@ -25,11 +25,11 @@ class MessageThread: Codable, Equatable {
         
         let title = try container.decode(String.self, forKey: .title)
         let identifier = try container.decode(String.self, forKey: .identifier)
-        let messages = try container.decodeIfPresent([Message].self, forKey: .messages) ?? []
+        let messages = try container.decodeIfPresent([String:Message].self, forKey: .messages) ?? [:] // account for firebase UUID by making this a dict, if nil value found return empty dictionary, ensure no nil value by using compact Map. on line 32.
         
         self.title = title
         self.identifier = identifier
-        self.messages = messages
+        self.messages = messages.compactMap({ $0.value })
     }
 
     

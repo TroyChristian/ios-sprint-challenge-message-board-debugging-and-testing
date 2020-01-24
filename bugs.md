@@ -12,7 +12,13 @@ Bug 2: Decoding Error
 
 Action Plan: This looks like a model error, I'm going to investigate any structs and their keys for mismatches to what the server might respond with.  Ok, in the fetchMessages function. I highly suspect that the error is due to firebase assigning a string value to its decoded data in a list, making it effectively a dictionary.  
 
-Fix:  modify expected data to account for firebase returning a dictionary, strip the UUID keys out by using .values to return a list of Message Structs like our program expects. 
+Fix:  modify expected data to account for firebase returning a dictionary, strip the UUID keys out by using .values to return a list of Message Structs like our program expects in MessageThreadController.
+
+2B. Decoding error continues: 
+
+Action Plan: Same as before, check out networking dealing with decoding and compare against our model. 
+
+Fix:  Modify messages to return a dictionary to account for firebase making a dictionary out of all arrays. Strip out nil values using compactMap in init statement in MessageThread model.
 
 UI
 
@@ -21,4 +27,6 @@ UI
 Action Plan: Go find the ViewController responsible for sending  a message in a thread and investigate. 
 
 Fix:  typo in  stringly typed value in prepare for segue function. change "addmesage" to  "addMesssage""
+
+
 
